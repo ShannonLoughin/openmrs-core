@@ -49,14 +49,39 @@ public class Format {
 		return d == null ? "" : format(d.doubleValue());
 	}
 	
+	/**
+	 * This method formats a date object from a text box. It does so by using the locale to determine
+	 * how to format the date, and includes only the desired information of a date object.
+	 *
+	 * @param date input date to format
+	 * @return the inputted date. This string object should only contain the amount of
+	 * information that is required by date. If the paremeter is null, return the empty string.
+	 */
 	public static String formatTextBoxDate(Date date) {
 		return format(date, Context.getLocale(), FORMAT_TYPE.DATE);
 	}
 	
+	/**
+	 * This method formats a date object. It does so by using the locale to determine
+	 * how to format the date, and includes only the desired information of a date object.
+	 *
+	 * @param date input date to format
+	 * @return the inputted date. This string object should only contain the amount of
+	 * information that is required by date. If the paremeter is null, return the empty string.
+	 */
 	public static String format(Date date) {
 		return format(date, Context.getLocale(), FORMAT_TYPE.DATE);
 	}
 	
+	/**
+	 * This method formats a date object as a string. It does so by using the locale to determine
+	 * how to format the date, and includes the desired information of a type object.
+	 *
+	 * @param date input date to format as a string
+	 * @param type input type to determine how much information from the date is returned
+	 * @return the inputted date as a string. This string object should only contain the amount of
+	 * information that is required by type. If a paremeter is null, return the empty string.
+	 */
 	public static String format(Date date, FORMAT_TYPE type) {
 		return format(date, Context.getLocale(), type);
 	}
